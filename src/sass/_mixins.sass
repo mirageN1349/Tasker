@@ -1,0 +1,22 @@
+@import "_variables"
+
+@mixin button-normalize($height: 33px, $color-hover: #A0D8DC, $background-color: #C4C4C4)
+  border: none
+  outline: none
+  cursor: pointer
+  border-radius: 3px
+  height: $height
+  background: $background-color
+  color: #000
+  transition: .3s
+  &:hover
+    background: $color-hover
+  img
+    max-width: 20px
+    max-height: 20px
+  
+
+@mixin center($content: center)
+  display: flex
+  align-items: center
+  justify-content: $content
