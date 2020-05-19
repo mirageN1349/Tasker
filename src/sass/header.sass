@@ -1,0 +1,35 @@
+@import "_variables"
+@import "_mixins"
+
+.header
+  height: $header-height
+  background: $header-color
+  @include center(space-between)
+  &__info
+    @include center()
+    &-title
+      color: #B3B7B9
+      margin-left: 20px
+      font-family: Montserrat, normal
+  &__options
+    margin: 0 20px
+    @include center()
+      
+    &-tasker
+      margin-left: 8px
+      width: 135px
+      text-align: center
+      font-weight: 300
+      @include center()
+      @include button-normalize()
+      span
+        margin-left: 13px
+    &-home
+      @include center()
+      @include button-normalize()
+    &-theme
+      margin-right: 30px
+      background: transparent !important
+      @include button-normalize()
+
+      

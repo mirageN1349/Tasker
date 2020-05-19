@@ -1,0 +1,31 @@
+@import "_variables"
+@import "_mixins"
+
+.toolbar
+  margin-top: 13px 
+  margin-left: 19px
+  @include center(start)
+  &-favorite
+    margin-left: 10px
+    height: 30px
+    width: 34px
+    @include center()
+    @include button-normalize(35px, orange)
+  &-name 
+    border: none
+    background: transparent
+    color: #fff
+    font-size: 20px
+    min-width: 10px
+    outline: blue
+    padding: 6px 15px
+    height: 35px
+    &:hover
+      background: #C4C4C4
+      border-radius: 3px
+      cursor: pointer
+    &:focus 
+      border: 1px solid blue
+      border-radius: 3px  
+      background: #fff
+      color: #000

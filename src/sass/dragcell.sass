@@ -1,0 +1,120 @@
+@import "_variables"
+@import "_mixins"
+
+.dragcell
+  display: flex
+  .draglist
+    display: flex
+    margin-top: 12px
+    margin-left: 20px
+    width: 270px
+    padding: 15px 16px
+    transition: none !important
+    @include button-normalize(45px)
+    &-coll
+      display: flex
+      height: 35px
+      width: 100%
+    &-card
+      display: flex
+      justify-content: space-around
+      flex-direction: column
+      div
+        margin-left: 10px
+        height: 30px
+        @include center(start)
+        &:hover
+          background: #C4C4C4
+          border-radius: 3px
+          max-width: 220px
+    &-plus
+      margin-top: 2px
+    &-text
+      font-weight: 300
+      font-size: 15px
+      margin-left: 10px
+    &__input-task, &__task-template
+      background-color: #fff
+      border-radius: 3px
+      box-shadow: 0 1px 0 rgba(9,30,66,.25)
+      cursor: pointer
+      display: block
+      margin: 0 auto
+      margin-bottom: 8px
+      width: 253px
+      min-height: 20px
+      position: relative
+      text-decoration: none
+      z-index: 0
+    &__task-template
+      min-height: 30px
+      padding: 5px
+    &__active-coll, &-textarea, &-textarea-task
+      border: none
+      width: 230px
+    &__active-coll
+      border: 1px solid blue
+      border-radius: 3px
+      background: #fff
+      color: #646060
+      font-weight: 300
+      font-size: 14px
+      outline: blue
+      padding: 10px 7px
+      height: 35px
+      margin: 5px
+      margin-left: 7px
+      cursor: text
+    &-textarea, &-textarea-task
+      background: transparent
+      border-radius: 3px
+      box-shadow: none
+      font-weight: 600
+      height: 20px
+      margin: 10px auto
+      min-height: 20px
+      padding: 4px 8px
+      resize: none
+      max-height: 256px
+      color: #333
+      &-task
+        outline: none
+        font-weight: 300
+        font-size: 14px
+      &:focus
+        background: #fff
+    &-cell, &-task
+      display: flex
+      flex-direction: column
+      justify-content: start
+      div
+        @include center(start)
+  
+        
+    &-button 
+      color: #fff !important
+      min-width: 146px
+      margin-left: 8px
+      margin-right: 7px
+      @include center()
+      @include button-normalize(33px, green, #333)
+    &-close
+      height: 14px !important
+      background: transparent !important
+      @include button-normalize()
+      
+.active-cell,  .active-card
+  padding: 0 !important
+  height: auto !important
+  transition: none !important
+  background: #EBECF0 !important
+  display: block !important
+  padding-bottom: 8px !important
+  
+
+.active-cell
+  cursor: default !important
+ 
+.none 
+  display: none !important
+  
